@@ -13,10 +13,10 @@ function Banner() {
   const renderCard = (url, title, bio) => {
     return (
       <div class="flex space-x-4 mx-auto">
-        <img src={url} alt="" class="h-28 w-28" />
-        <div class="space-y-2 w-[25rem]">
-          <h1 class="text-white font-bold text-2xl">{title}</h1>
-          <p class="text-white">{bio}</p>
+        <img src={url} alt="" class="h-20 w-20" />
+        <div class="space-y-2 w-full">
+          <h1 class="text-white font-bold text-xl">{title}</h1>
+          <p class="text-white text-sm">{bio}</p>
         </div>
       </div>
     );
@@ -31,13 +31,13 @@ function Banner() {
           <img src="https://i.imgur.com/dLotCPd.png" alt="Logo" class="h-40" />
           <h1 class="text-white font-bold text-7xl -ml-8 -mb-20">Seefy</h1>
         </div>
-        <h1 class="text-white font-semibold text-xl my-4">
+        <h1 class="text-white font-semibold text-xl text-center my-4">
           Understand and Unite users around their problems && Automate and
           Facilitate Task researching...
         </h1>
         <button
           onClick={() => navigate("/login")}
-          class="bg-slate-900 text-white cursor-pointer text-lg w-[20rem] p-2 text-center rounded-2xl font-semibold mt-4"
+          class="bg-slate-900 text-white cursor-pointer text-lg w-80 p-2 text-center rounded-2xl font-semibold mt-4"
         >
           Get Started
         </button>
@@ -66,7 +66,7 @@ function Banner() {
           className="h-[45rem] w-full object-contain"
         />
       </div>
-      <div class=" flex items-center justify-center mx-auto bg-slate-700 h-[60rem] w-full bg-no-repeat">
+      <div class="lg:flex items-center justify-center mx-auto bg-slate-700 h-[60rem] w-full bg-no-repeat space-y-4">
         <img
           src={require("../assets/cover.png")}
           alt=""
@@ -78,7 +78,7 @@ function Banner() {
           className="h-[30em] w-full object-contain  rounded-full shadow-lg"
         />
       </div>
-      <div class="grid gap-10 grid-cols-3 mx-auto items-center justify-center my-20">
+      <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto items-center justify-center p-20 bg-slate-600">
         {renderCard(
           "https://happn.com/assets/landing/values/values-illustration-promise.png",
           "You are in chargge !",
@@ -111,7 +111,7 @@ function Banner() {
         )}
       </div>
 
-      <div class="mx-auto flex flex-col w-full bg-slate-500 items-center justify-center mt-10">
+      <div class="mx-auto flex flex-col w-full bg-slate-500 items-center justify-center py-10">
         <h1 class="text-white font-semibold text-lg mt-10">Download the App</h1>
         <p class="text-white text-sm">
           Available in the Playstore and the Appstore{" "}

@@ -9,7 +9,7 @@ import {
   HiBookOpen,
 } from "react-icons/hi";
 
-function RenderBody({ data }) {
+function RenderBody({ data, header, link }) {
   return (
     <div class="mt-8">
       <div class="mb-2">
@@ -20,7 +20,7 @@ function RenderBody({ data }) {
         />
       </div>
       <div class="my-2 space-y-1">
-        <p class="text-black font-bold text-sm">Mary Swarchz</p>
+        <p class="text-black font-bold text-sm">{header}</p>
         <p class="text-black text-xs opacity-80">@elaine_swarchz</p>
         <p class="text-black text-xs opacity-80">
           Admin & Creator of the group
@@ -30,7 +30,7 @@ function RenderBody({ data }) {
         The biography of the user is being displayed here for some reason we
         don't know why but it is the thing we like to do n we don't know why but
         it is the thing we like to do n we don't know why but it is the thing we
-        like to do....
+        like to do....{link}
       </p>
       <div class="flex justify-between items-center  space-x-4 w-80 mt-6">
         <div class="flex items-center space-x-2 text-black justify-center">
@@ -52,7 +52,7 @@ function RenderBody({ data }) {
           <p class="text-black text-xs">Twitter</p>
         </div>
       </div>
-      <h1 class="text-black text-xs lg:text-sm font-bold mt-16 mb-4">
+      <h1 class="text-black text-xs lg:text-sm font-bold mt-10 mb-4">
         More Mental Related Groups...
       </h1>
       {data.map(({ profile, fullName, title, url }) => {
@@ -79,7 +79,7 @@ function RenderBody({ data }) {
           </div>
         );
       })}
-      <div class="flex justify-between items-center my-8 mx-1">
+      <div class="flex justify-between items-center mt-6 mx-1">
         <div class="flex flex-col items-center justify-center">
           <HiHome size={20} color="black" />
           <p class="text-black text-xs ml-1">Home</p>

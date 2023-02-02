@@ -28,6 +28,10 @@ const SharingFeature = () => {
 
   const handleFileUpload = () => {
     // Perform file upload here...
+
+    console.log("====================================");
+    console.log(selectedFile);
+    console.log("====================================");
   };
 
   return (

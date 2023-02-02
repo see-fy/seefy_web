@@ -18,10 +18,8 @@ const ModalPop = () => {
   const usernameRef = useRef(null);
   const ageRef = useRef(null);
   const emailRef = useRef(null);
-  const phoneRef = useRef(null);
   const jobRef = useRef(null);
   const bioRef = useRef(null);
-  const situationRef = useRef(null);
   const genderRef = useRef(null);
   const locationRef = useRef(null);
 
@@ -46,12 +44,10 @@ const ModalPop = () => {
       username: usernameRef.current.value,
       email: emailRef.current.value || user.email,
       age: ageRef.current.value,
-      phone: phoneRef.current.value,
       bio: bioRef.current.value,
       location: locationRef.current.value,
       gender: genderRef.current.value,
       job: jobRef.current.value,
-      situation: situationRef.current.value,
       timestamp: serverTimestamp(),
     })
       .then(() => {
@@ -142,24 +138,7 @@ const ModalPop = () => {
                   />
                 </div>
               </div>
-              <div className="mt-2">
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Phone (Please put the indicatif)
-                </label>
-                <div className="mt-1 rounded-md shadow-sm">
-                  <input
-                    id="phone"
-                    type="number"
-                    name="phone"
-                    className="form-input py-1 px-4 block w-full leading-5 rounded-md transition duration-150 ease-in-out sm:text-sm sm:leading-5 outline-none border cursor-pointer"
-                    required
-                    ref={phoneRef}
-                  />
-                </div>
-              </div>
+
               <div className="mt-2">
                 <label
                   htmlFor="age"
@@ -214,24 +193,6 @@ const ModalPop = () => {
                 </div>
               </div>
 
-              <div className="mt-2">
-                <label
-                  htmlFor="situation"
-                  className="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Situation
-                </label>
-                <div className="mt-1 rounded-md shadow-sm">
-                  <input
-                    id="situation"
-                    type="text"
-                    name="situation"
-                    className="form-input py-1 px-4 block w-full leading-5 rounded-md transition duration-150 ease-in-out sm:text-sm sm:leading-5 outline-none border cursor-pointer"
-                    required
-                    ref={situationRef}
-                  />
-                </div>
-              </div>
               <div className="mt-2">
                 <label
                   htmlFor="location"

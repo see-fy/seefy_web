@@ -17,11 +17,10 @@ function UserProfilePage() {
   const fullnameRef = useRef(null);
   const usernameRef = useRef(null);
   const ageRef = useRef(null);
+  const picRef = useRef(null);
   const emailRef = useRef(null);
-  const phoneRef = useRef(null);
   const jobRef = useRef(null);
   const bioRef = useRef(null);
-  const situationRef = useRef(null);
   const genderRef = useRef(null);
   const locationRef = useRef(null);
   const [showSettings, setShowSettings] = useState(false);
@@ -48,12 +47,11 @@ function UserProfilePage() {
       username: usernameRef.current.value,
       email: emailRef.current.value || user.email,
       age: ageRef.current.value,
-      phone: phoneRef.current.value,
       bio: bioRef.current.value,
       location: locationRef.current.value,
       gender: genderRef.current.value,
+      profilePic: picRef.current.value,
       job: jobRef.current.value,
-      situation: situationRef.current.value,
       timestamp: serverTimestamp(),
     })
       .then(() => {
@@ -81,8 +79,8 @@ function UserProfilePage() {
   };
 
   return (
-    <div className="min-h-screen  bg-gray-500">
-      <div className="container mx-auto   bg-slate-900">
+    <div className="min-h-screen w-full items-center  flex flex-col  bg-gray-500">
+      <div className="container min-h-screen min-w-full bg-slate-900">
         <div className="flex flex-col items-center">
           <div className="relative rounded-full shadow-lg">
             {/* Profile picture goes here */}
@@ -104,10 +102,10 @@ function UserProfilePage() {
                 Seefy
               </h1>
             </div>
-            <div className="absolute bottom-0 right-44 mb-4 mr-4 bg-red-800 rounded-full shadow-md">
+            <div className="absolute bottom-0 right-28 mb-4 mr-6 bg-red-800 rounded-full shadow-md">
               <button
                 onClick={logout}
-                className="focus:outline-none hover:bg-gray-300 hover:text-gray-800 p-2 rounded-full text-white cursor-pointer font-semibold w-40"
+                className="focus:outline-none hover:bg-gray-300 hover:text-gray-800 p-2 rounded-full text-white cursor-pointer font-semibold w-28"
               >
                 Sign Out
               </button>
@@ -115,34 +113,30 @@ function UserProfilePage() {
             <div className="absolute bottom-0 right-0 mb-4 mr-4 bg-white rounded-full shadow-md">
               <button
                 onClick={() => setShowSettings(!showSettings)}
-                className="focus:outline-none hover:bg-gray-300 hover:text-gray-800 p-2 rounded-full cursor-pointer font-semibold w-40"
+                className="focus:outline-none hover:bg-gray-300 hover:text-gray-800 p-2 rounded-full cursor-pointer font-semibold w-28"
               >
                 Edit Profile
               </button>
             </div>
           </div>
-          <div key={profile.id} className="mt-4">
+          <div className="mt-4 w-full p-10">
             <h1 className="text-2xl font-bold text-white">
               {profile.fullname}
             </h1>
             <h1 className="text-sm text-white mt-2">@{profile.username}</h1>
             <div className="text-gray-400 text-sm mt-2 ">
-              {profile.age},{profile.gender}
+              {profile.age}, {profile.gender}
             </div>
             <h1 className="text-sm text-gray-400 mt-2">{profile.email}</h1>
-            <h1 className="text-sm  text-gray-400 mt-2">{profile.phone}</h1>
             <div className="text-gray-400 text-sm mt-2 ">
               {profile.location}
             </div>
             <div className="text-gray-400 text-sm mt-2 ">{profile.job}</div>
-            <div className="text-gray-400 text-sm mt-2 ">
-              {profile.situation}
-            </div>
             <div className="text-gray-400 text-sm mt-2 w-80 mb-2 ">
               {profile.bio}
             </div>
           </div>
-          <div className="h-[64rem]">
+          <div className="h-full w-full p-10">
             {showSettings && (
               <div className="mt-12 w-full lg:w-[50rem]">
                 <div className="bg-white rounded-lg shadow-lg p-4 settings-section">
@@ -215,19 +209,21 @@ function UserProfilePage() {
                   <div className="mb-2">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"
-                      htmlFor="phone"
+                      htmlFor="profilePic"
                     >
-                      Phone
+                      Your profile Picture URL(paste it here)
                     </label>
                     <input
                       className="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="phone"
-                      type="number"
-                      name="phone"
-                      defaultValue={profile.phone}
-                      ref={phoneRef}
+                      id="profilePic"
+                      type="text"
+                      name="profilePic"
+                      defaultValue={profile.profilePic}
+                      ref={picRef}
+                      required
                     />
                   </div>
+
                   <div className="mb-2">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"
@@ -260,22 +256,7 @@ function UserProfilePage() {
                       ref={jobRef}
                     />
                   </div>
-                  <div className="mb-2">
-                    <label
-                      className="block text-gray-700 text-sm font-bold mb-2"
-                      htmlFor="location"
-                    >
-                      Situation
-                    </label>
-                    <input
-                      className="shadow appearance-none border rounded w-full py-1 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="situation"
-                      type="text"
-                      name="situation"
-                      defaultValue={profile.situation}
-                      ref={situationRef}
-                    />
-                  </div>
+
                   <div className="mb-2">
                     <label
                       className="block text-gray-700 text-sm font-bold mb-2"

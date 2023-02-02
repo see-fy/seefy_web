@@ -13,11 +13,15 @@ import { auth } from "./firebase";
 import { useSelector } from "react-redux";
 import { loginUser, logoutUser, selectUser } from "./slices/userSlice";
 import Message from "./pages/message";
+import Issuefy from "./pages/issuefy";
+import { useTranslation } from "react-i18next";
 
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
+
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -38,14 +42,14 @@ function App() {
 
   if (!loading) {
     return (
-      <div className=" flex items-center justify-center bg-slate-900 h-screen">
+      <div className=" flex flex-col my-2 items-center justify-center bg-slate-900 h-screen">
         <img
           src="https://i.imgur.com/dLotCPd.png"
           alt=""
           className="h-28 rounded-full"
         />
         <h1 className="text-white font-semibold text-4xl">
-          Share your problem with others....
+          {t("Share your problem with others")}....
         </h1>
       </div>
     );
@@ -62,6 +66,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/modal" element={<Modal />} />
             <Route path="/messages" element={<Message />} />
+            <Route path="/issuefy" element={<Issuefy />} />
           </>
         )}
         {!user && (

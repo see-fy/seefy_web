@@ -22,13 +22,17 @@ code {
   background-position: center;
   background-size: cover;
   width: 300px;
+  
 }
+
 
 .container {
   position: relative;
-  width: 60%;
+  width: 100%;
   display: block;
 }
+
+
 .swiper-pagination-fraction {
   bottom: 0;
 }

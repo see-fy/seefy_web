@@ -162,24 +162,23 @@ function Login() {
               fill the form)
             </p>
           </div>
-
-          <button
-            onClick={loginWithGoogle}
-            className="my-3 cursor-pointer text-md font-semibold w-full bg-slate-400 rounded-lg outline-none p-2"
-          >
-            Login with Google
-          </button>
-
-          <div className="flex mb-8">
-            <p className="text-gray-400  text-xs font-semibold">
-              This page is protected by Google reCAPTCHA to <br /> ensure you're
-              not a bot.{" "}
-              <span className="text-blue-900 cursor-pointer text-sm font-semibold hover:border-b">
-                Learn More.
-              </span>{" "}
-            </p>
-          </div>
         </form>
+        <button
+          onClick={loginWithGoogle}
+          className="my-3 cursor-pointer text-md font-semibold w-full bg-slate-400 rounded-lg outline-none p-2"
+        >
+          Login with Google
+        </button>
+
+        <div className="flex mb-8">
+          <p className="text-gray-400  text-xs font-semibold">
+            This page is protected by Google reCAPTCHA to <br /> ensure you're
+            not a bot.{" "}
+            <span className="text-blue-900 cursor-pointer text-sm font-semibold hover:border-b">
+              Learn More.
+            </span>{" "}
+          </p>
+        </div>
       </div>
     </div>
   );

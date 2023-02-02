@@ -1,6 +1,12 @@
 import React from "react";
 import SharingFeature from "./Sharing";
 
+let cover =
+  "https://telegram.org/file/464001098/2/aw1iikW0b4I.78035/2083cd76dcb5f4fda4";
+const style = {
+  backgroundImage: "url(" + cover + ")",
+};
+
 const MessageList = () => {
   return (
     <div className="h-screen flex p-10 space-x-4">
@@ -33,9 +39,9 @@ const MessageList = () => {
           </div>
         </div>
       </div>
-      <div className="h-full p-14">
-        <div className="h-full overflow-y-scroll w-[80rem]">
-          <div className="space-x-2 py-2 flex  w-full px-10">
+      <div className="h-full p-14" style={style}>
+        <div className="h-full overflow-y-auto w-[80rem] ">
+          <div className="space-x-2 py-2 flex  w-full ">
             <div className="text-gray-700 text-sm font-semibold mb-2">
               <img
                 src="https://randomuser.me/api/portraits/men/1.jpg"
@@ -43,24 +49,12 @@ const MessageList = () => {
                 className="w-10 h-10 rounded-2xl mb-4 "
               />
             </div>
-            <div className="text-gray-600 text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-              molestiae debitis fugit qui necessitatibus ullam, autem, dolores
-              illum fugiat voluptatem asperiores ipsum voluptatibus ipsa eaque,
-              sunt quis ea earum nesciunt! Repudiandae id error itaque vel qui
-              fuga, obcaecati distinctio fugiat dolorum temporibus harum facere
-              voluptatem pariatur commodi vitae nihil ut non quisquam
-              reprehenderit in iste accusamus fugit laudantium vero. Fugit!
-              Voluptates vitae hic quam nihil, itaque nostrum inventore error
-              perferendis a deleniti repellendus dolores aperiam deserunt iure
-              dolore sunt enim impedit amet facere, possimus nobis ex harum.
-              Veniam, dolorem possimus? Magnam, facere accusantium! Commodi
-              soluta iusto fuga neque, hic reiciendis! Illum, reprehenderit nam,
-              neque ipsa dolores, ratione veniam unde odio pariatur est laborum
-              iusto quos soluta earum doloribus! Necessitatibus, nihil.
+            <div className="text-gray-600 text-xs max-w-sm bg-slate-500 p-3 rounded rounded-br-3xl">
+              <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              
+                facilis? Corrupti, nostrum.
+              </p>
             </div>
           </div>
           <div className="py-2 space-x-2 flex  mt-4 w-full">
@@ -71,18 +65,13 @@ const MessageList = () => {
                 className="w-10 h-10 rounded-2xl mb-4"
               />
             </div>
-            <div className="text-gray-600 text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              fuga voluptate optio nihil aliquid aut numquam veniam impedit
-              tempore cupiditate beatae culpa repellendus, tempora quam ad eum.
-              Debitis, cumque nesciunt! Dignissimos sapiente molestias
-              reprehenderit, tempora adipisci ad expedita, recusandae, nisi
-              distinctio alias quidem? Molestiae quidem accusamus nihil
-              perspiciatis suscipit ducimus nobis inventore, at aperiam facere
-              dolorem distinctio laudantium dicta voluptates.
+            <div className="text-gray-600 text-xs max-w-sm bg-slate-500 p-3 rounded rounded-br-3xl">
+              <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto molestias ab voluptatem iure qui? Nemo, perferendis.
+                tempora voluptas dolore consequuntur necessitatibus, eius minima
+                facilis? Corrupti, nostrum.
+              </p>
             </div>
           </div>
           <div className="py-2 space-x-2 flex  mt-4 w-full">
@@ -93,32 +82,16 @@ const MessageList = () => {
                 className="w-10 h-10 rounded-2xl mb-4"
               />
             </div>
-            <div className="text-gray-600 text-xs ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis magni eum nesciunt expedita natus? Quia cum earum eius
-              cupiditate magnam quos voluptate doloribus consequatur libero.
-              Sapiente, atque! Enim, quaerat earum! Nulla saepe, doloribus
-              sapiente provident odio optio? Deleniti, quo dicta. Obcaecati
-              ratione aliquam molestias voluptatem voluptatum ut praesentium
-              sit. Fugiat veritatis optio consequatur nostrum ipsa facere minima
-              sapiente, quam nemo. Ut cumque unde libero. Soluta harum repellat
-              aliquam fuga, fugiat id atque illum consequatur ipsa nulla
-              incidunt explicabo ducimus alias. Reprehenderit debitis voluptas
-              amet illo vel, quas optio. Nihil, at. Non cumque dignissimos velit
-              quas, accusamus suscipit corrupti ab facilis illo! Id veniam minus
-              nam! Quaerat asperiores natus sequi nostrum est, cumque ut dolor,
-              doloremque distinctio libero consequuntur sunt earum. Quidem rerum
-              doloremque molestiae quaerat a. Ut unde praesentium doloribus
-              dicta assumenda quam voluptas deserunt cumque dolorem eum odio aut
-              recusandae reiciendis a autem eius, molestias libero quae
-              veritatis. Voluptates!
+            <div className="text-gray-600 text-xs max-w-sm bg-slate-500 p-3 rounded rounded-br-3xl">
+              <p className="text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architec
+                facilis? Corrupti, nostrum.
+              </p>
             </div>
           </div>
         </div>
-        <div>
+        <div className="-mt-5">
           <form className="flex justify-between items-center px-4 py-2 bg-white rounded-lg shadow-lg">
             <SharingFeature />
             <input
